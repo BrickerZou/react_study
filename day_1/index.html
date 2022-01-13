@@ -14,8 +14,13 @@
     <script type="text/javascript" src="../babel.min.js"></script>
     
     <script type="text/babel">
+        const text = "hello!"
         const VDOM=(
-            <h1>第一次hello_react</h1>
+            <div>
+                <h1>第一次hello_react</h1>
+                <p>hahah{text}</p>
+            </div>
+            
         )
         
         //渲染虚拟DOM到界面
@@ -23,7 +28,7 @@
         /*
             JS语法规则
                 1.定义虚拟DOM时，不要写引号。
-                2.标签中用到js表达式时要用{}
+                2.标签中用到js表达式:变量时要用{}
                 3.样式类名制定class变classNam
                 4.内联样式 style={{key:value}}
                 5.只有一个根标签 可以把多个标签放在根便签内部

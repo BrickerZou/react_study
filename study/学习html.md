@@ -7,6 +7,7 @@ span img a
 ## 链接
 <a href="/i/w3school_logo_white.gif" download="w3logo"--下载文件名 target="_blank "--打开方式>
 
+## 框 <input type="text" value="文本框内的值"></input>
 ## 文本
 <p><strong></strong>--加粗<em></em>--斜体</p>
 
