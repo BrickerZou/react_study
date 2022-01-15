@@ -1,59 +1,58 @@
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CatPhotoApp</title>
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
-    <style>
-      .red-text {
-        color: red;
-      }
-    
-      h2 {
-        font-family: Lobster;
-      }
-    
-      p {
-        font-size: 16px;
-        font-family: monospace;
-      }
-    </style>
+  <meta charset="utf-8">
+  <title>React App</title>
+  <link rel="stylesheet" href="./css/bootstrap.css">
 </head>
 <body>
-
-
-<h2 class="red-text">CatPhotoApp</h2>
-<main>
-  <p class="red-text">Click here to view more <a href="#">cat photos</a>.</p>
-
-  <a href="#"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back."></a>
-
+<div id="root">
   <div>
-    <p>Things cats love:</p>
-    <ul>
-      <li>cat nip</li>
-      <li>laser pointers</li>
-      <li>lasagna</li>
-    </ul>
-    <p>Top 3 things cats hate:</p>
-    <ol>
-      <li>flea treatment</li>
-      <li>thunder</li>
-      <li>other cats</li>
-    </ol>
+    <div class="row">
+      <div class="col-xs-offset-2 col-xs-8">
+        <div class="page-header"><h2>React Router Demo</h2></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2 col-xs-offset-2">
+        <div class="list-group">
+          <a class="list-group-item" href="/about">About</a>
+          <a class="list-group-item active"href="/home" aria-current="page">Home</a>
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="panel">
+          <div class="panel-body">
+            <div>
+              <h2>Home组件内容</h2>
+              <div>
+                <ul class="nav nav-tabs">
+                  <li>
+                    <a class="list-group-item" href="./home-news.html">News</a>
+                  </li>
+                  <li>
+                    <a class="list-group-item active" href="./home-message.html">Message</a>
+                  </li>
+                </ul>
+                <div>
+                  <ul>
+                    <li>
+                      <a href="/message1">message001</a>&nbsp;&nbsp;
+                    </li>
+                    <li>
+                      <a href="/message2">message002</a>&nbsp;&nbsp;
+                    </li>
+                    <li>
+                      <a href="/message/3">message003</a>&nbsp;&nbsp;
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <form action="https://freecatphotoapp.com/submit-cat-photo">
-    <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
-    <label><input type="radio" name="indoor-outdoor"> Outdoor</label><br>
-    <label><input type="checkbox" name="personality" checked> Loving</label>
-    <label><input type="checkbox" name="personality"> Lazy</label>
-    <label><input type="checkbox" name="personality"> Energetic</label><br>
-    <input type="text" placeholder="cat photo URL" required>
-    <button type="submit">Submit</button>
-  </form>
-</main>
+</div>
 </body>
 </html>

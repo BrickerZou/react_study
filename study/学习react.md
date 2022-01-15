@@ -25,10 +25,33 @@
 
 # week2
 
+## 创建项目
 npm create-react-app  hello_react //创建
 npm start // 启动服务器,默认3000端口
 -node_modules 用到的库
 -public  index.html
 -src   需要写的 .css .jsx
 
+
+
+
+
+## route路由
+    1.npm add react-route-dom
+    2.import {Link,BrowserRouter,Route,Routes} from 'react-router-dom' //{}引入需要的API
+    3.编写路由链接
+    ```javascript
+    <Browser>
+        <Link to="/about">About</Link>
+        <br />    
+        <Link to="/home">Home</Link>
+        4.注册路由
+        <Routes>
+            <Route path="/home" element={<Home/>}/>
+            <Route path="/about" element={<About/>}/>
+        </Routes>
+
+    </Browser>
+
+    ```
 
