@@ -22,6 +22,7 @@ export default class App extends Component {
                     <NavLink  className="list-group-item" to="/home">Home</NavLink> */}
 
                     {/* 标签中间的内容也是props的一个特殊属性children.标签所有属性全部通过props传递*/}
+                    
                     <MyNavLink to="/home" >Home</MyNavLink>  {/* 等同于  <MyNavLink to="/home" children="Home"></MyNavLink>*/}
                     <MyNavLink to="/about">About</MyNavLink>
                
@@ -32,8 +33,11 @@ export default class App extends Component {
                     {/* 注册路由，网页跳转到的页面内容*/}
                     
                         <Routes>
+                            {/* 匹配成功就break 提高效率 */}
+                            
                             <Route path="/home" element={<Home/>}/>
                             <Route path="/about" element={<About/>}/>
+                            
                         </Routes>
                 </div>
                 </BrowserRouter>
