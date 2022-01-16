@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import {Link,BrowserRouter,Route,Routes} from 'react-router-dom'
+import {BrowserRouter,Route,Routes} from 'react-router-dom'
 import  Home from './components/Home'
 import  About from './components/About'
+import MyNavLink from './components/MyNavLink'
 
 export default class App extends Component {
     render() {
@@ -14,15 +15,20 @@ export default class App extends Component {
             */}
                 <BrowserRouter>
                 <div>
-                    {/* 编写路由链接，跳转到的网页url */}
-                
-                    <Link to="/about">About</Link>
-                    <br />
-                    <Link to="/home">Home</Link>
+                    {/* 编写路由链接，跳转到的网页url
+                    初始写法
+                     <NavLink  className="list-group-item" to="/about">About</NavLink>
+                     <br/>
+                    <NavLink  className="list-group-item" to="/home">Home</NavLink> */}
+
+                    {/* 标签中间的内容也是props的一个特殊属性children.标签所有属性全部通过props传递*/}
+                    <MyNavLink to="/home" >Home</MyNavLink>  {/* 等同于  <MyNavLink to="/home" children="Home"></MyNavLink>*/}
+                    <MyNavLink to="/about">About</MyNavLink>
                
                 </div>
                 
-                <div>
+                <div className='panel-body'>
+               
                     {/* 注册路由，网页跳转到的页面内容*/}
                     
                         <Routes>
