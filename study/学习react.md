@@ -26,7 +26,7 @@
 # week2
 
 ## 创建项目
-npm create-react-app  hello_react //创建
+npx create-react-app  hello_react //创建
 npm start // 启动服务器,默认3000端口
 -node_modules 用到的库
 -public  index.html
@@ -52,6 +52,11 @@ npm start // 启动服务器,默认3000端口
         </Routes>
 
     </Browser>
+
+
+    编写子路由时候遇到的bug：
+         <Route path="/home/*" element={<Home/>}/>
+         才能渲染之后的子路由，否则父路由不会导航更深
 
     ```
 
