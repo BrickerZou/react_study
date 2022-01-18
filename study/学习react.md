@@ -22,6 +22,15 @@
     2.必须加render
     3.必须有返回值
 
+5.
+        /*
+            组件的三大特性
+            1.state  --内部修改动态属性
+            2.props  --组件传递信息/属性    ...this.props用法
+            3.refs   --相当于id属性 绑定到 render() 输出的任何组件上
+        */
+    1. componentWillMount  将要装载，在render之前自动调用；
+    2. componentDidMount，（装载完成），在render之后自动调用
 
 # week2
 
@@ -52,11 +61,16 @@ npm start // 启动服务器,默认3000端口
         </Routes>
 
     </Browser>
+    ```
+
+## 编程式导航
+1. this.props.history.push('/home') // 跳转到某一网页
+1. this.props.history.go(n) //     前进或后退
 
 
     编写子路由时候遇到的bug：
          <Route path="/home/*" element={<Home/>}/>
          才能渲染之后的子路由，否则父路由不会导航更深
 
-    ```
+   
 
