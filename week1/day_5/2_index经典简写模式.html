@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="test"></div>
+   
+
+    <script type="text/javascript" src="../react.development.js"></script>
+    <script type="text/javascript" src="../react-dom.development.js"></script>
+    <script type="text/javascript" src="../babel.min.js"></script>
+    <script type="text/babel">
+    
+        /*
+            组件的三大特性
+            1.state  --修改动态属性
+            2.props  --静态属性init
+            3.refs   --相当于id属性 绑定到 render() 输出的任何组件上
+        */
+        class MyComponent extends React.Component{
+            // constructor(props) {
+            //     super(props);
+            //     this.state = {day:'一',week:1};
+            // }
+            //构造器可以不需要!
+            // 此时
+            /*
+                1.箭头函数
+                2.直接定义state
+            */
+            state ={day:'一',week:1};
+
+            fun=()=>{
+                console.log('按钮2被点击了') ;
+                //修改属性,状态不可直接修改
+                this.setState({day:'二',week:this.state.week+1});
+                console.log(this.refs.today)
+            } 
+
+           render(){
+                const {day,week} = this.state
+                //ref="today"效果相当于id，独一无二 this.refs.today获得的是此标签对象
+                return <h1 ref="today" onClick={this.fun}>今天星期{day},{week},{this.props.name}</h1> 
+           }
+
+             
+        }
+
+        //对标签属性进行限制
+        MyComponent.propTypes = {
+            name:ProTypes.string.isRequired, //必须参数
+            sex:ProTypes.string,
+        }
+
+        // 指定默认标签属性值
+        // MyComponent.dafaultProps = {
+
+        // }
+
+     // 1.{...p}代表
+        const p={name:"zcm"}
+        ReactDOM.render(<MyComponent {...p} / >,document.getElementById("test"))
+
+        // 2.
+        // ReactDOM.render(<MyComponent name="zcm" / >,document.getElementById("test"))
+
+
+            
+
+    </script>
+</body>
+</html>

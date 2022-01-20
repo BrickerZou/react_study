@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="test"></div>
+
+    <script type="text/javascript" src="../../react.development.js"></script>
+    <script type="text/javascript" src="../../react-dom.development.js"></script>
+    <script type="text/javascript" src="../../babel.min.js"></script>
+    <script type="text/babel">
+        // 创建类式组件
+        // 创建react中的类  extends React.Component 构造器可以省略
+        /*
+            1.必须继承React.Component父类
+            2.必须加render
+            3.必须有返回值
+        */
+        let container = React.createRef();
+        class MyComponent extends React.Component{
+           
+           render(){
+            //    console.log(this); this是自动new出来的一个实例对象
+                return(
+                <div>
+                    <input type="text" ref={container} value="类式组件" readOnly></input>
+                    <button onClick={()=>{console.log(container.current)}}></button>
+                </div>
+                )
+           }
+        }
+
+        
+        ReactDOM.render(<MyComponent/>,document.getElementById("test"))
+
+
+    </script>
+</body>
+</html>
