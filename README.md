@@ -7,3 +7,5 @@ react-dom.development.js：虚拟dom
 
 react.development.js
 
+或者 create-react-app 配置自动脚手架
+
